@@ -1,0 +1,57 @@
+@font-face {
+    font-family: anurati;
+    src: url(Anurati-Regular.otf);
+}
+
+body {
+  margin: 0;
+}
+
+.intro {
+  height: 100vh;
+  background: #121212;
+  display: table;
+  width: 100%;
+}
+
+.Name {
+  font-size: 4em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: anurati;
+  color: #fff;
+  font-weight: 100;
+  display: table-cell;
+  vertical-align: middle;
+
+}
+
+.Name-part {
+  display: inline-block;
+}
+
+.Name.is-expanded .USTAV {
+  transform: translateX(0);
+  opacity: 1;
+  max-width: none;
+  transition: transform 500ms 125ms ease, opacity 200ms 275ms;
+}
+
+.G {
+  position: relative;
+  z-index: 1;
+  animation: oEnter 750ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.USTAV {
+  opacity: 0;
+  transform: translateX(-10%);
+  //max-width: 1em;
+  transition: transform 300ms 100ms ease, opacity 200ms;
+}
+
+@keyframes oEnter {
+  0% { color: #121212; transform: rotate(50deg); }
+  100% { color: white; transform: rotate(0deg); }
+}

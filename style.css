@@ -3,19 +3,33 @@
     src: url(Anurati-Regular.otf);
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
+  background-color: #121212;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .intro {
   height: 100vh;
-  background: #121212;
   display: table;
   width: 100%;
 }
 
 .Name {
-  font-size: 4em;
+  font-size: 10rem;
   letter-spacing: 0.1em;
   text-align: center;
   font-family: anurati;
@@ -23,7 +37,20 @@ body {
   font-weight: 100;
   display: table-cell;
   vertical-align: middle;
+  animation-name: gore;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
 
+@keyframes gore {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-120px);
+  }
 }
 
 .Name-part {
@@ -54,4 +81,24 @@ body {
 @keyframes oEnter {
   0% { color: #121212; transform: rotate(50deg); }
   100% { color: white; transform: rotate(0deg); }
+}
+
+.galler_wrapper {
+  padding: 50px 0;
+  font-size: 0;
+}
+
+.gallery_segment_item {
+  width: 20%;
+  height: 300px;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg {
+    height: 112%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

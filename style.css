@@ -38,6 +38,7 @@ body {
   animation-duration: 2s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
+  width: 100%;
 }
 
 @keyframes gore {
@@ -117,5 +118,28 @@ p {
 
 @keyframes fade {
   from {opacity: 0;}
-  to {opacity: 1;}
+  to {opacity: 0.7;}
+}
+
+.foto-wrapper {
+  position: absolute;
+  top: 370px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.foto{
+  width: 230px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  margin: 0 25px;
+  transition: opacity .9s ease-in-out;
+  cursor: pointer;
+}
+
+.foto:hover{
+  filter: grayscale(0%);
+  opacity: 0.9;
 }
